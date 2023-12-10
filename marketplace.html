@@ -1,11 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mercado en linea</title>
+  <meta charset="UTF-8">
+  <title>Marketplace</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+   <style>
+    .productos {
+      display: flex; 
+      justify-content: space-between; 
+      flex-wrap: wrap; 
+    }
+    
+    .producto {
+      width: 200px; 
+      height: 200px; 
+      margin-bottom: 10px;
+      text-align: center; 
+      overflow: hidden; 
+    }
+
+    .producto img {
+      width: 100%;
+      height: 100%; 
+      object-fit: cover; 
+    }
+  </style>
 </head>
 <body>
-    
+  <header>
+    <h1>Tienda en linea</h1>
+    <h2>Productos Destacados</h2>
+</header>
+    <main>
+        <div class="d-grid gap-2 d-md-block">
+            <button class="btn btn-primary" type="button">Inicio</button>
+            <button class="btn btn-primary" type="button">Producto</button>
+            <button class="btn btn-primary" type="button">Registro</button>
+            <button class="btn btn-primary" type="button">Inicio de sesion</button>
+          </div>
+      </main>
+  </header>
+  
+  <main>
+    <section class="productos">
+        <div class="card" style="width: 18rem;">
+            <img src="data:image/jpeg;base64,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" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Blusa de verano</h5>
+              <p class="card-text">Tejido de punto poliester algodon-tipo medio.</p>
+              <p>Talla: S, M, L, XL</p>
+              <p>Precio: $9.99</p>
+              <a href="#" class="btn btn-primary">Detalles</a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_771638-MEC50315675716_062022-O.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Blusa Yesimar</h5>
+              <p class="card-text">Tela poliester algodon-silueta semiajustada</p>
+              <p>Talla: S, M, L, XL</p>
+              <p>Precio: $11.99</p>
+              <a href="#" class="btn btn-primary">Detalles</a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvv1qX8SudMHd2BL5hh_fe-VubSv320PAxdw&usqp=CAU" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Blusa Eva</h5>
+              <p class="card-text">Tejido de punto de poliester.</p>
+              <p>Talla: S, M, L, XL</p>
+              <p>Precio: $17,99</p>
+              <a href="#" class="btn btn-primary">Detalles</a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAZL_zytvMC7waS3cqoPx2R967GpFqOEAvSQ&usqp=CAU" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Blusa Floricienta</h5>
+              <p class="card-text">Tejido poliester-muy comoda y a la moda.</p>
+              <p>Talla: S, M, L, XL</p>
+              <p>Precio: $13,99</p>
+              <a href="#" class="btn btn-primary">Dettalles</a>
+            </div>
+          </div>
+          
+      <div class="producto">
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>Derechos reservados &copy; 2023 Marketplace</p>
+    <nav>
+      <ul>
+        <li><a href="/politicas">Políticas de Privacidad</a></li>
+        <li><a href="/terminos">Términos y Condiciones</a></li>
+        <li><a href="/contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
+
+
